@@ -2,7 +2,7 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/naver')
 def hello_world():
     return 'abcdabcd'
 
@@ -20,4 +20,4 @@ def method():
         return "POST로 전달된 데이터({}, {})".format(num, name)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0")
